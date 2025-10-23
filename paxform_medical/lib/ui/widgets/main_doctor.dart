@@ -1,10 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../core/core.dart';
 
 class MainDoctor extends StatelessWidget {
   const MainDoctor({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final controller = PageController();
+    return SizedBox(
+      height: 187,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SizedBox(
+            height: 172,
+            child: PageView.builder(
+              scrollDirection: Axis.horizontal,
+              controller: controller,
+              itemBuilder: (context, i) => Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: MainDoctorCard(),
+              ),
+            ),
+          ),
+
+          SmoothPageIndicator(
+            controller: controller,
+            count: 3,
+            effect: WormEffect(
+              dotHeight: 3,
+              activeDotColor: Color(0XFF1C85E8),
+              dotColor: Color(0XFF1C85E8).withValues(alpha: 0.2),
+              dotWidth: 15,
+              type: WormType.thinUnderground,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class MainDoctorCard extends StatelessWidget {
+  const MainDoctorCard({super.key});
 
   @override
   Widget build(BuildContext context) {

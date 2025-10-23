@@ -10,11 +10,12 @@ class DashboardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primary,
-      body: SafeArea(
+      body: SizedBox(
         child: SingleChildScrollView(
           child: Column(
             children: [
               SizedBox(width: double.infinity),
+              SizedBox(height: MediaQuery.of(context).padding.top),
               AppSpacing.v20,
               Text(
                 "Medical Center",
@@ -29,8 +30,8 @@ class DashboardView extends StatelessWidget {
               Container(
                 width: double.infinity,
                 padding: EdgeInsets.only(
-                  left: 20,
-                  right: 20,
+                  left: 0,
+                  right: 0,
                   top: 10,
                   bottom: 50,
                 ),
@@ -46,7 +47,7 @@ class DashboardView extends StatelessWidget {
                     AppSpacing.v24,
                     MainDoctor(),
                     AppSpacing.v24,
-                    SizedBox(height: 10000),
+                    BookAppointmentRow(),
                   ],
                 ),
               ),
