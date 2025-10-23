@@ -39,7 +39,15 @@ class DashboardView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(26),
                 ),
                 child: Column(
-                  children: [LittleDivider(), AppSpacing.v16, AppSearchBar()],
+                  children: [
+                    LittleDivider(),
+                    AppSpacing.v16,
+                    AppSearchBar(),
+                    AppSpacing.v24,
+                    MainDoctor(),
+                    AppSpacing.v24,
+                    SizedBox(height: 10000),
+                  ],
                 ),
               ),
             ],

@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Paxforms Medical',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'PublicSans',
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
