@@ -4,3 +4,4 @@ export './main_doctor.dart';
 export './book_appointment_card.dart';
 export './mini_headers.dart';
 export './category_widget.dart';
+export './doctor_card.dart';

@@ -27,4 +27,5 @@ class AppAssets {
   static const String drJason = "assets/images/dr_jason.png";
   static const String drWhite = "assets/images/dr_white.png";
   static const String drWilson = "assets/images/dr_wilson.png";
+  static const String hospital = "assets/images/hospital.png";
 }
