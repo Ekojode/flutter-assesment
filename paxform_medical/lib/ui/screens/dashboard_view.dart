@@ -58,6 +58,8 @@ class DashboardView extends StatelessWidget {
                     DoctorGrid(),
                     AppSpacing.v24,
                     MiniHeaders(header: "Nearest Medical Center"),
+                    AppSpacing.v24,
+                    HospitalGrid(),
                   ],
                 ),
               ),

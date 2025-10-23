@@ -28,6 +28,9 @@ class _DoctorCardState extends State<DoctorCard> {
         elevation: 1.5,
         surfaceTintColor: Colors.transparent,
         color: AppColors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadiusGeometry.circular(14),
+        ),
         margin: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
