@@ -43,7 +43,11 @@ class CategoryGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final categories = CategoryModel.appCategories;
-    final crossAxisCount = MediaQuery.of(context).size.width > 350 ? 4 : 3;
+    final crossAxisCount = MediaQuery.of(context).size.width > 650
+        ? 8
+        : MediaQuery.of(context).size.width > 350
+        ? 4
+        : 3;
     return Padding(
       padding: EdgeInsetsGeometry.symmetric(horizontal: 20),
       child: GridView.builder(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../core/core.dart';
 import '../ui.dart';
@@ -16,7 +17,7 @@ class DashboardView extends StatelessWidget {
             children: [
               SizedBox(width: double.infinity),
               SizedBox(height: MediaQuery.of(context).padding.top),
-              AppSpacing.v20,
+              AppSpacing.v24,
               Text(
                 "Medical Center",
                 style: TextStyle(
@@ -26,7 +27,7 @@ class DashboardView extends StatelessWidget {
                   letterSpacing: 0.5,
                 ),
               ),
-              AppSpacing.v20,
+              AppSpacing.v24,
               Container(
                 width: double.infinity,
                 padding: EdgeInsets.only(
@@ -63,6 +64,32 @@ class DashboardView extends StatelessWidget {
                   ],
                 ),
               ),
+              AppSpacing.v24,
+              Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0XFF0C68C0),
+                ),
+                child: SvgPicture.asset(AppAssets.checkShieldIcon),
+              ),
+              AppSpacing.v24,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 60.0),
+                child: Text(
+                  "Information shared via forms is encrypted and can only be viewed by those you share it with.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    letterSpacing: 0.5,
+                    color: AppColors.white,
+
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              AppSpacing.v24,
+              AppSpacing.v24,
+              AppSpacing.v24,
             ],
           ),
         ),

@@ -6,7 +6,8 @@ import '../../data/data.dart';
 
 class DoctorCard extends StatefulWidget {
   final DrModel doctor;
-  const DoctorCard({super.key, required this.doctor});
+  final bool likeStatus;
+  const DoctorCard({super.key, required this.doctor, required this.likeStatus});
 
   @override
   State<DoctorCard> createState() => _DoctorCardState();
@@ -14,6 +15,12 @@ class DoctorCard extends StatefulWidget {
 
 class _DoctorCardState extends State<DoctorCard> {
   bool isLiked = false;
+
+  @override
+  void initState() {
+    super.initState();
+    isLiked = widget.likeStatus;
+  }
 
   void updateLike() {
     isLiked = !isLiked;
@@ -148,7 +155,7 @@ class DoctorGrid extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: doctors.length,
       itemBuilder: (context, i) {
-        return DoctorCard(doctor: doctors[i]);
+        return DoctorCard(doctor: doctors[i], likeStatus: i % 2 == 1);
       },
     );
   }
