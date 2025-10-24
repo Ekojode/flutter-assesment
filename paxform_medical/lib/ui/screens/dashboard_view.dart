@@ -18,6 +18,7 @@ class DashboardView extends StatelessWidget {
               SizedBox(width: double.infinity),
               SizedBox(height: MediaQuery.of(context).padding.top),
               AppSpacing.v24,
+              AppSpacing.v8,
               Text(
                 "Medical Center",
                 style: TextStyle(
@@ -28,6 +29,7 @@ class DashboardView extends StatelessWidget {
                 ),
               ),
               AppSpacing.v24,
+              AppSpacing.v8,
               Container(
                 width: double.infinity,
                 padding: EdgeInsets.only(
